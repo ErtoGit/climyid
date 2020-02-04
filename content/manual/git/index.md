@@ -6,10 +6,21 @@ weight: 4
 summary: Manual untuk `git`.
 ---
 
+# <a name="top"></a>Daftar Isi
+
+- [Membuat repo baru](#membuat-repo-baru)
+- [Menambahkan remote git url](#menambahkan-remote-git-url)
+- [Mengecek alamat remote git url](#mengecek-alamat-repo-git-url)
+- [Push data ke remote git](#push-data-ke-remote-git)
+- [Pull data dari remote git](#pull-data-dari-remote-git)
+- [Mengganti url remote repo](#mengganti-url-remote-repo)
+
+---
+
 ## Perintah umum
 Untuk bantuan ketik `git help`.
 
-### Membuat repo baru
+### <a name="membuat-repo-baru"></a>Membuat repo baru
 Jalankan perintah berikut dalam folder project.
 ```
 git init
@@ -17,7 +28,7 @@ git add .
 git commit -am 'Initial commit'
 ```
 
-### Menambahkan remote git url
+### <a name="menambahkan-remote-git-url"></a>Menambahkan remote git url
 ```
 git remote add origin <GIT_REPO_URL>
 # OR
@@ -35,12 +46,12 @@ Sehingga saat mau `git push` tinggal eksekusi satu perintah ini.
 git push -u origin master
 ```
 
-### Mengecek alamat remote git url
+### <a name="mengecek-alamat-repo-git-url"></a>Mengecek alamat remote git url
 ```
 git remote show origin
 ```
 
-### Push data ke remote git
+### <a name="push-data-ke-remote-git"></a>Push data ke remote git
 ```
 git push -u origin master
 # OR
@@ -49,7 +60,7 @@ git push -u github master
 git push -u gitlab master
 ```
 
-### Pull data dari remote git
+### <a name="pull-data-dari-remote-git"></a>Pull data dari remote git
 ```
 git pull origin master
 OR
@@ -58,7 +69,9 @@ OR
 git pull github master
 ```
 
-### Mengganti url remote repo
+### <a name="mengganti-url-remote-repo"></a>Mengganti url remote repo
 ```
 git remote set-url origin <GIT_REPO_BARU>
 ```
+
+[[Ke atas]](#top)

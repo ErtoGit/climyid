@@ -6,30 +6,46 @@ weight: 4
 summary: Manual untuk `hugo`.
 ---
 
-## Perintah umum
+# <a name="top"></a>Daftar Isi
+
+- [Perintah umum](#perintah-umum)
+    - [Membuat site baru](#perintah-membuat-site-baru)
+    - [Local server](#perintah-local-server)
+- [Install theme baru](#install-theme)
+    - [Install dari Git](#install-theme-dari-git)
+    - [Install dari file .zip](#install-theme-dari-zip)
+- [Deployment](#deployment)
+    - [Persiapan](#deployment-persiapan)
+    - [Firebase](#deployment-firebase)
+    - [Netlify](#deployment-netlify)
+
+---
+
+## <a name="perintah-umum"></a>Perintah umum
 
 Untuk bantuan ketik `hugo help`.
 
-### Membuat site baru
+### <a name="perintah-membuat-site-baru"></a>Membuat site baru
 
 ```
 hugo new site <PROJECT_NAME>
 hugo build
 ```
 
-### Local server
+### <a name="perintah-local-server"></a>Local server
 
 ```
 hugo server
 ```
 
----
+[[Ke atas]](#top)
 
-## Install theme baru
+
+## <a name="install-theme"></a>Install theme baru
 
 Menyalin atau `git clone` sebuah theme pada folder `namaproject/themes`.
 
-#### Install dari Git
+#### <a name="install-theme-dari-git"></a>Install dari Git
 
 ```
 cd mynewsite
@@ -37,15 +53,16 @@ cd themes
 git clone <ALAMAT_GIT_REPO_THEME>
 ```
 
-#### Install dari file .zip
+#### <a name="install-theme-dari-zip"></a>Install dari file .zip
 
 Ekstrak semua file yang ada di file .zip yg diunduh, ke dalam folder `themes`. Struktur folder nya akan jadi seperti ini `mynewsite/themes/nama-theme-yg-diunduh`
 
----
+[[Ke atas]](#top)
 
-## Deployment
 
-### Persiapan
+## <a name="deployment"></a>Deployment
+
+### <a name="deployment-persiapan"></a>Persiapan
 1. Pastikan `publishDir = "public"` di file `config.toml` dengan contoh sebagai berikut.
 ```
 baseURL = "/"
@@ -56,7 +73,7 @@ publishDir = "public"
 2. Jalankan `hugo`
 
 Eksekusi kembali poin 2, tiap kali ada perubahan pada kode.
-### Firebase
+### <a name="deployment-firebase"></a>Firebase
 1. Pastikan `"public": "public"` di file `firebase.json` sudah sama dengan `publishDir` di file `config.toml`.
 2. Login dengan `firebase login`
 3. Aktifkan dengan `firebase init`
@@ -71,7 +88,7 @@ Untuk re-deploy saat ada perubahan pada kode, jalankan perintah,
 **Unix terminal**
 `hugo && firebase deploy --only hosting:<nama_app>`
 
-### Netlify
+### <a name="deployment-netlify"></a>Netlify
 1. Buat file `netlify.toml` pada root dan salin kode berikut.
 ```
 [build]
@@ -114,3 +131,5 @@ HUGO_ENABLEGITINFO = "true"
 4. Ikuti langkah selanjutnya.
 
 Untuk mengupdate otomatis, jalankan `git push -u origin master` tiap kali ada perubahan pada kode.
+
+[[Ke atas]](#top)
