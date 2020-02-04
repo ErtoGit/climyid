@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Hugo - CLI.my.id</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.6aa5eecd4ca7c47fb2ca9b0775a7bd787e3e64a2eadf0fef8c9f924498f49127.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img alt="Logo" src="/images/logo.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img alt="Logo" src="/images/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="/docs/firebase/">Firebase</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/git/">Git</a>
+    </li>
+    
+    <li class="active ">
+      <a href="/docs/hugo/">Hugo</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/netlify/">Netlify</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/now/">Now</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/npm/">NPM</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/other/">Other Frameworks</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/vue-cli/">vue-cli</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Hugo</h1>
+<div class="content ">
+  <h2 id="perintah-umum">Perintah umum</h2>
+<p>Untuk bantuan ketik <code>hugo help</code>.</p>
+<h3 id="membuat-site-baru">Membuat site baru</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo new site &lt;PROJECT_NAME&gt;
+hugo build
+</code></pre></div><h3 id="local-server">Local server</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo server
+</code></pre></div><hr>
+<h2 id="install-theme-baru">Install theme baru</h2>
+<p>Menyalin atau <code>git clone</code> sebuah theme pada folder <code>namaproject/themes</code>.</p>
+<h4 id="install-dari-git">Install dari Git</h4>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd mynewsite
+cd themes
+git clone &lt;ALAMAT_GIT_REPO_THEME&gt;
+</code></pre></div><h4 id="install-dari-file-zip">Install dari file .zip</h4>
+<p>Ekstrak semua file yang ada di file .zip yg diunduh, ke dalam folder <code>themes</code>. Struktur folder nya akan jadi seperti ini <code>mynewsite/themes/nama-theme-yg-diunduh</code></p>
+<hr>
+<h2 id="deployment">Deployment</h2>
+<h3 id="persiapan">Persiapan</h3>
+<ol>
+<li>Pastikan <code>publishDir = &quot;public&quot;</code> di file <code>config.toml</code></li>
+<li>Jalankan <code>hugo</code></li>
+</ol>
+<p>Eksekusi kembali poin 2, tiap kali ada perubahan pada kode.</p>
+<h3 id="firebase">Firebase</h3>
+<ol>
+<li>Pastikan <code>&quot;public&quot;: &quot;public&quot;</code> di file <code>firebase.json</code> sudah sama dengan <code>publishDir</code> di file <code>config.toml</code>.</li>
+<li>Login dengan <code>firebase login</code></li>
+<li>Aktifkan dengan <code>firebase init</code></li>
+<li>Edit file <code>firebase.json</code> sesuai panduan. <a href="/firebase.html#deploy-multisite-dalam-project-di-hosting">Cek disini</a>.</li>
+<li>Akhiri dengan <code>firebase deploy --only hosting:&lt;nama_app&gt;</code></li>
+</ol>
+<p>Untuk re-deploy saat ada perubahan pada kode, jalankan perintah,</p>
+<p><strong>PowerShell</strong>
+<code>hugo; firebase deploy --only hosting:&lt;nama_app&gt;</code></p>
+<p><strong>Unix terminal</strong>
+<code>hugo &amp;&amp; firebase deploy --only hosting:&lt;nama_app&gt;</code></p>
+<h3 id="netlify">Netlify</h3>
+<ol>
+<li>Pastikan <code>publish = &quot;public&quot;</code> di file <code>netlify.toml</code> sudah sama dengan <code>publishDir</code> di file <code>config.toml</code>.</li>
+<li>Buat site baru dengan <code>netlify sites:create --manual --with-ci</code></li>
+<li>Pada langkah <code>Your build command (hugo build/yarn run build/etc):</code> ketikkan  <code>hugo deploy</code></li>
+<li>Ikuti langkah selanjutnya.</li>
+</ol>
+<p>Untuk mengupdate otomatis, cukup jalankan <code>git push -u origin master</code> tiap kali ada perubahan pada kode.</p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <ul>
+            <li class="zerostatic"><a href="https://cli.my.id">CLI.my.id</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>

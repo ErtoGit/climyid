@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CLI.my.id Docs on CLI.my.id</title>
+    <link>/</link>
+    <description>Recent content in CLI.my.id Docs on CLI.my.id</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Feb 2020 15:14:39 +0800</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Firebase</title>
+      <link>/docs/firebase/</link>
+      <pubDate>Sat, 01 Feb 2020 15:14:39 +0800</pubDate>
+      
+      <guid>/docs/firebase/</guid>
+      <description>Perintah umum Untuk bantuan ketik firebase help.
+Deploy project ke hosting firebase loginfirebase initfirebase deployDeploy multisite dalam project di hosting  Di web console Firebase, pilih Add another site dan tentukan nama project-nya.</description>
+    </item>
+    
+    <item>
+      <title>Install Hugo</title>
+      <link>/manual/install-hugo/</link>
+      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
+      
+      <guid>/manual/install-hugo/</guid>
+      <description>To use this theme you will need to have Hugo installed. If you don&amp;rsquo;t already have Hugo installed please follow the official installation guide
+Check Hugo Version This theme uses Hugo Pipes to compile SCSS and minify assets.</description>
+    </item>
+    
+    <item>
+      <title>Install Theme</title>
+      <link>/manual/install-theme/</link>
+      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
+      
+      <guid>/manual/install-theme/</guid>
+      <description>Create a new Hugo site hugo new site mynewsiteThis will create a fresh Hugo site in the folder mynewsite.
+Install theme Copy or git clone this theme into the sites themes folder mynewsite/themes</description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>/docs/git/</link>
+      <pubDate>Sat, 01 Feb 2020 15:14:39 +0800</pubDate>
+      
+      <guid>/docs/git/</guid>
+      <description>Manual untuk &lt;code&gt;git&lt;/code&gt;.</description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/docs/hugo/</link>
+      <pubDate>Sat, 01 Feb 2020 15:14:39 +0800</pubDate>
+      
+      <guid>/docs/hugo/</guid>
+      <description>Manual untuk &lt;code&gt;hugo&lt;/code&gt;.</description>
+    </item>
+    
+    <item>
+      <title>Netlify</title>
+      <link>/docs/netlify/</link>
+      <pubDate>Sat, 01 Feb 2020 15:14:39 +0800</pubDate>
+      
+      <guid>/docs/netlify/</guid>
+      <description>Manual untuk &lt;code&gt;netlify&lt;/code&gt;.</description>
+    </item>
+    
+    <item>
+      <title>Now</title>
+      <link>/docs/now/</link>
+      <pubDate>Sat, 01 Feb 2020 15:14:39 +0800</pubDate>
+      
+      <guid>/docs/now/</guid>
+      <description>Manual untuk &lt;code&gt;now&lt;/code&gt;.</description>
+    </item>
+    
+    <item>
+      <title>NPM</title>
+      <link>/docs/npm/</link>
+      <pubDate>Sat, 01 Feb 2020 15:14:39 +0800</pubDate>
+      
+      <guid>/docs/npm/</guid>
+      <description>Manual untuk &lt;code&gt;npm&lt;/code&gt;.</description>
+    </item>
+    
+    <item>
+      <title>Other Frameworks</title>
+      <link>/docs/other/</link>
+      <pubDate>Sat, 01 Feb 2020 15:14:39 +0800</pubDate>
+      
+      <guid>/docs/other/</guid>
+      <description>Manual untuk frameworks lain.</description>
+    </item>
+    
+    <item>
+      <title>vue-cli</title>
+      <link>/docs/vue-cli/</link>
+      <pubDate>Sat, 01 Feb 2020 15:14:39 +0800</pubDate>
+      
+      <guid>/docs/vue-cli/</guid>
+      <description>Manual untuk &lt;code&gt;vue-cli&lt;/code&gt;.</description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>/manual/configure/</link>
+      <pubDate>Mon, 11 Feb 2019 19:30:08 +1000</pubDate>
+      
+      <guid>/manual/configure/</guid>
+      <description>Syntax highlighting and menus can be configured via &lt;code&gt;config.toml&lt;/code&gt;.</description>
+    </item>
+    
+    <item>
+      <title>Specimen</title>
+      <link>/manual/specimen/</link>
+      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
+      
+      <guid>/manual/specimen/</guid>
+      <description>Markdown Test Page  Headings Paragraphs Blockquotes Lists Horizontal rule Table Code Inline elements   Headings Heading one Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Whisper</title>
+      <link>/manual/example/</link>
+      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
+      
+      <guid>/manual/example/</guid>
+      <description>&lt;p&gt;Whisper is a minimal documentation theme built for Hugo. The design &amp;amp; functionality is intentionally minimal.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

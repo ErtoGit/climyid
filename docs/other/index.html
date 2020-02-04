@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Other Frameworks - Hugo Whisper Theme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.6aa5eecd4ca7c47fb2ca9b0775a7bd787e3e64a2eadf0fef8c9f924498f49127.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img alt="Logo" src="/images/logo.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img alt="Logo" src="/images/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+
+    
+    
+<h1 class="title">Other Frameworks</h1>
+<div class="content ">
+  <h3 id="cara-menjalankan-nextcloud-occ-command">Cara menjalankan Nextcloud occ command</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">/opt/rh/{PHP_VERSION}/root/bin/php occ {OCC_COMMMAND}
+</code></pre></div><h3 id="restart-webmin">Restart webmin</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">/etc/init.d/webmin restart
+</code></pre></div><h3 id="restart-vps">Restart vps</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">reboot
+</code></pre></div><h3 id="delete-all-lines-in-vim">Delete all lines in vim</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">dG
+</code></pre></div><h3 id="force-delete-a-folder">Force delete a folder</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">rm -r -f /path/
+</code></pre></div><h3 id="jika-bermasalah-dengan-le-cert-yg-kosong-pada-webmin">Jika bermasalah dengan LE cert yg kosong pada Webmin</h3>
+<p>Cek jika ada file <code>https://github.com/webmin/webmin/blob/master/webmin/webmin-lib.pl</code> di <code>/usr/share/webmin/webmin/</code></p>
+<h3 id="force-https-via-htaccess">Force HTTPS via htaccess</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#Uncomment RewriteEngine if never declare
+#RewriteEngine on
+
+#Using permanent redirect 301
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+#Using temporary redirect 307
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=307,NE,L]
+
+#Redirect all HTTP traffic to a domain
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.yourdomain.com/$1 [R,L]
+
+#Redirect specific domain to use HTTPS
+RewriteCond %{HTTP_HOST} ^yourdomain\.com [NC] 
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.yourdomain.com/$1 [R,L]
+</code></pre></div><h3 id="check-file-yg-paling-besar-dlm-1-folder">Check file yg paling besar dlm 1 folder</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">du -a /var | sort -n -r | head -n 10
+</code></pre></div><blockquote>
+<p>Ref: <a href="https://bit.my.id/bo7Lzhhr">https://bit.my.id/bo7Lzhhr</a></p>
+</blockquote>
+<h3 id="empty-specific-file-content">Empty specific file content</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># : &gt; access.log
+OR 
+# true &gt; access.log
+</code></pre></div><blockquote>
+<p>Ref: <a href="https://bit.my.id/gAoo527l">https://bit.my.id/gAoo527l</a></p>
+</blockquote>
+<h3 id="commands-to-check-listening-ports">Commands to check listening ports</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">lsof -n -P | grep LISTEN
+lsof -i tcp | grep nomor-port  &lt;-- paling gampang
+netstat -vatn
+netstat -tulpn
+</code></pre></div><h3 id="cari-tahu-yg-menggunakan-port">Cari tahu yg menggunakan port</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fuser nomor_port/tcp  &lt;-- catat nomor PID
+lsof -i tcp | grep nomor-PID  &lt;-- cari tahu service mana yg pake nomor port ybs
+fuser -k nomor_port/tcp
+</code></pre></div><h3 id="reset-mssql-server-listening-ports">Reset mssql-server listening ports</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">service mssql-server status  &lt;-- cek nomor PID
+service mssql-server stop
+fuser -k nomor_port/tcp
+</code></pre></div><h3 id="set-timezone-in-phpini">Set timezone in PHP.ini</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ vi /etc/php.ini
+
+[Date]
+; Defines the default timezone used by the date functions
+; http://php.net/date.timezone
+date.timezone = &#39;Asia/Makassar&#39;
+
+$ service httpd restart
+</code></pre></div><h3 id="how-to-use-le-on-vesta-login">How to use LE on Vesta login</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mv /usr/local/vesta/ssl/certificate.crt /usr/local/vesta/ssl/unusablecer.crt
+mv /usr/local/vesta/ssl/certificate.key /usr/local/vesta/ssl/unusablecer.key
+ln -s /home/admin/conf/web/ssl.server1.flaunt7.com.crt /usr/local/vesta/ssl/certificate.crt
+ln -s /home/admin/conf/web/ssl.server1.flaunt7.com.key /usr/local/vesta/ssl/certificate.key
+service vesta restart
+</code></pre></div><h3 id="how-to-use-le-on-hestia-login">How to use LE on Hestia login</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">ln -s /home/admin/conf/web/ssl.server1.flaunt7.com.crt /usr/local/hestia/ssl/certificate.crt
+ln -s /home/admin/conf/web/ssl.server1.flaunt7.com.key /usr/local/hestia/ssl/certificate.key
+service hestia restart
+</code></pre></div><h3 id="change-tcp-mssql-port-not-working-failed-to-connect">Change TCP MSSQL port (not working, failed to connect)</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">/opt/mssql/bin/mssql-conf set network.tcpport &lt;new_tcp_port&gt;
+systemctl restart mssql-server
+</code></pre></div><h3 id="instal-php71--php72-di-virtualmin">Instal <code>php71</code> &amp; <code>php72</code> di virtualmin</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">yum install centos-release-scl
+yum install rh-php72 rh-php72-php-mysqlnd rh-php72-php-mbstring rh-php72-php-imagick
+systemctl restart httpd
+</code></pre></div>
+</div>
+</div>
+
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <ul>
+            <li class="zerostatic"><a href="https://cli.my.id">CLI.my.id</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
