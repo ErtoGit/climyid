@@ -46,7 +46,13 @@ Ekstrak semua file yang ada di file .zip yg diunduh, ke dalam folder `themes`. S
 ## Deployment
 
 ### Persiapan
-1. Pastikan `publishDir = "public"` di file `config.toml`
+1. Pastikan `publishDir = "public"` di file `config.toml` dengan contoh sebagai berikut.
+```
+baseURL = "/"
+themesDir = "themes"
+publishDir = "public"
+```
+
 2. Jalankan `hugo`
 
 Eksekusi kembali poin 2, tiap kali ada perubahan pada kode.
@@ -54,7 +60,7 @@ Eksekusi kembali poin 2, tiap kali ada perubahan pada kode.
 1. Pastikan `"public": "public"` di file `firebase.json` sudah sama dengan `publishDir` di file `config.toml`.
 2. Login dengan `firebase login`
 3. Aktifkan dengan `firebase init`
-4. Edit file `firebase.json` sesuai panduan. [Cek disini](/firebase.html#deploy-multisite-dalam-project-di-hosting).
+4. Edit file `firebase.json` sesuai panduan. [Cek disini](/manual/firebase/).
 5. Akhiri dengan `firebase deploy --only hosting:<nama_app>`
 
 Untuk re-deploy saat ada perubahan pada kode, jalankan perintah,
@@ -103,8 +109,8 @@ HUGO_ENABLEGITINFO = "true"
 
 2. Pastikan nilai `HUGO_VERSION` sudah sama dengan versi Hugo yang terpasang. Cek dengan perintah `hugo version` lewat terminal.
 3. Kemudian pastikan juga nilai `publish = "public"` di file `netlify.toml` sudah sama dengan `publishDir` di file `config.toml`.
-2. Buat site baru dengan `netlify sites:create --manual --with-ci`
-3. Pada langkah `Your build command (hugo build/yarn run build/etc):` ketikkan  `hugo deploy`
+2. Buat site baru dengan cara deploy manual, [baca panduan disini](/manual/netlify/).
+3. Pada langkah `Your build command (hugo build/yarn run build/etc):` ketikkan  `hugo deploy` atau cukup dengan `hugo`.
 4. Ikuti langkah selanjutnya.
 
-Untuk mengupdate otomatis, cukup jalankan `git push -u origin master` tiap kali ada perubahan pada kode.
+Untuk mengupdate otomatis, jalankan `git push -u origin master` tiap kali ada perubahan pada kode.
