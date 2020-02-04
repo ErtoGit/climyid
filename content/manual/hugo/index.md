@@ -110,7 +110,7 @@ HUGO_ENABLEGITINFO = "true"
 2. Pastikan nilai `HUGO_VERSION` sudah sama dengan versi Hugo yang terpasang. Cek dengan perintah `hugo version` lewat terminal.
 3. Kemudian pastikan juga nilai `publish = "public"` di file `netlify.toml` sudah sama dengan `publishDir` di file `config.toml`.
 2. Buat site baru dengan cara deploy manual, [baca panduan disini](/manual/netlify/).
-3. Pada langkah `Your build command (hugo build/yarn run build/etc):` ketikkan  `hugo deploy` atau cukup dengan `hugo`.
+3. Pada langkah `Your build command (hugo build/yarn run build/etc):` ketikkan  `hugo --gc --minify` atau cukup dengan `hugo deploy`.
 4. Ikuti langkah selanjutnya.
 
 Untuk mengupdate otomatis, jalankan `git push -u origin master` tiap kali ada perubahan pada kode.
