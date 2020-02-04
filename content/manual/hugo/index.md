@@ -66,7 +66,43 @@ Untuk re-deploy saat ada perubahan pada kode, jalankan perintah,
 `hugo && firebase deploy --only hosting:<nama_app>`
 
 ### Netlify
-1. Pastikan `publish = "public"` di file `netlify.toml` sudah sama dengan `publishDir` di file `config.toml`.
+1. Buat file `netlify.toml` pada root dan salin kode berikut.
+```
+[build]
+publish = "public"
+command = "hugo --gc --minify"
+
+[context.production.environment]
+HUGO_VERSION = "0.63.2"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+command = "hugo --gc --minify --enableGitInfo"
+
+[context.split1.environment]
+HUGO_VERSION = "0.63.2"
+HUGO_ENV = "production"
+
+#[context.deploy-preview]
+#command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.63.2"
+
+[context.branch-deploy]
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.63.2"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
+
+```
+
+2. Pastikan nilai `HUGO_VERSION` sudah sama dengan versi Hugo yang terpasang. Cek dengan perintah `hugo version` lewat terminal.
+3. Kemudian pastikan juga nilai `publish = "public"` di file `netlify.toml` sudah sama dengan `publishDir` di file `config.toml`.
 2. Buat site baru dengan `netlify sites:create --manual --with-ci`
 3. Pada langkah `Your build command (hugo build/yarn run build/etc):` ketikkan  `hugo deploy`
 4. Ikuti langkah selanjutnya.
