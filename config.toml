@@ -4,7 +4,7 @@ title = "CLI.my.id"
 themesDir = "themes"
 theme = "hugo-whisper-theme"
 
-publishDir = "docs"
+publishDir = "public"
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
