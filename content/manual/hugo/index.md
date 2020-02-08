@@ -27,14 +27,14 @@ Untuk bantuan ketik `hugo help`.
 
 ### <a name="perintah-membuat-site-baru"></a>Membuat site baru
 
-```
+```bash
 hugo new site <PROJECT_NAME>
 hugo build
 ```
 
 ### <a name="perintah-local-server"></a>Local server
 
-```
+```bash
 hugo server
 ```
 
@@ -47,7 +47,7 @@ Menyalin atau `git clone` sebuah theme pada folder `namaproject/themes`.
 
 #### <a name="install-theme-dari-git"></a>Install dari Git
 
-```
+```bash
 cd mynewsite
 cd themes
 git clone <ALAMAT_GIT_REPO_THEME>
@@ -64,7 +64,7 @@ Ekstrak semua file yang ada di file .zip yg diunduh, ke dalam folder `themes`. S
 
 ### <a name="deployment-persiapan"></a>Persiapan
 1. Pastikan `publishDir = "public"` di file `config.toml` dengan contoh sebagai berikut.
-```
+```toml
 baseURL = "/"
 themesDir = "themes"
 publishDir = "public"
@@ -83,14 +83,18 @@ Eksekusi kembali poin 2, tiap kali ada perubahan pada kode.
 Untuk re-deploy saat ada perubahan pada kode, jalankan perintah,
 
 **PowerShell**
-`hugo; firebase deploy --only hosting:<nama_app>`
+```powershell
+hugo; firebase deploy --only hosting:<nama_app>
+```
 
 **Unix terminal**
-`hugo && firebase deploy --only hosting:<nama_app>`
+```bash
+hugo && firebase deploy --only hosting:<nama_app>
+```
 
 ### <a name="deployment-netlify"></a>Netlify
 1. Buat file `netlify.toml` pada root dan salin kode berikut.
-```
+```toml
 [build]
 publish = "public"
 command = "hugo --gc --minify"
