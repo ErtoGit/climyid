@@ -2,9 +2,12 @@
 title: 'Firebase'
 date: 2020-02-01T15:14:39+08:00
 draft: false
-weight: 2
+weight: 1
 summary: Manual untuk `firebase`.
 ---
+
+`firebase` adalah tool untuk deploy static site atau web app ke [Firebase](https://firebase.google.com/).  
+Live demo: https://climyid.web.app/
 
 ## Perintah umum
 Untuk bantuan ketik `firebase help`.

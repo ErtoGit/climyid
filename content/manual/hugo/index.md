@@ -2,7 +2,7 @@
 title: 'Hugo'
 date: 2020-02-01T15:14:39+08:00
 draft: false
-weight: 4
+weight: 1
 summary: Manual untuk `hugo`.
 ---
 

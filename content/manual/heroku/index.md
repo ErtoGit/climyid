@@ -1,8 +1,8 @@
 ---
 title: 'Heroku'
-date: 2020-02-09T15:14:39+08:00
+date: 2020-02-07T15:14:39+08:00
 draft: false
-weight: 4
+weight: 1
 summary: Manual untuk `heroku`.
 ---
 
@@ -45,7 +45,7 @@ git commit -am "Initial commit"
 git push heroku master
 ```
 
-## Available buildpacks
+## Buildpacks yg tersedia
 ```bash
 heroku/nodejs
 heroku/python

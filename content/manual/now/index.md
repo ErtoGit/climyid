@@ -2,11 +2,11 @@
 title: 'Now'
 date: 2020-02-01T15:14:39+08:00
 draft: false
-weight: 4
+weight: 1
 summary: Manual untuk `now`.
 ---
 
-`Now` adalah tool untuk deploy static site ke [ZEIT](https://zeit.co).  
+`now` adalah tool untuk deploy static site ke [ZEIT](https://zeit.co).  
 Live demo: https://manual.now.sh
 
 ## Instalasi
