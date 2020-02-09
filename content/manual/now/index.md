@@ -6,15 +6,13 @@ weight: 4
 summary: Manual untuk `now`.
 ---
 
-Now adalah tool untuk deploy ke ZEIT.co
+`Now` adalah tool untuk deploy static site ke [ZEIT](https://zeit.co).  
+Live demo: https://manual.now.sh
 
 ## Instalasi
 ```bash
 npm install -g now
 ```
-
----
-
 
 ## Perintah umum
 Untuk bantuan ketik `now help`.
