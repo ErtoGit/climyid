@@ -25,14 +25,14 @@ summary: Manual untuk `hugo`.
 
 Untuk bantuan ketik `hugo help`.
 
-### <a name="perintah-membuat-site-baru"></a>Membuat site baru
+#### <a name="perintah-membuat-site-baru"></a>Membuat site baru
 
 ```bash
 hugo new site <PROJECT_NAME>
 hugo build
 ```
 
-### <a name="perintah-local-server"></a>Local server
+#### <a name="perintah-local-server"></a>Local server
 
 ```bash
 hugo server
@@ -62,7 +62,7 @@ Ekstrak semua file yang ada di file .zip yg diunduh, ke dalam folder `themes`. S
 
 ## <a name="deployment"></a>Deployment
 
-### <a name="deployment-persiapan"></a>Persiapan
+#### <a name="deployment-persiapan"></a>Persiapan
 1. Pastikan `publishDir = "public"` di file `config.toml` dengan contoh sebagai berikut.
 ```toml
 baseURL = "/"
@@ -73,7 +73,7 @@ publishDir = "public"
 2. Jalankan `hugo`
 
 Eksekusi kembali poin 2, tiap kali ada perubahan pada kode.
-### <a name="deployment-firebase"></a>Firebase
+#### <a name="deployment-firebase"></a>Firebase
 1. Pastikan `"public": "public"` di file `firebase.json` sudah sama dengan `publishDir` di file `config.toml`.
 2. Login dengan `firebase login`
 3. Aktifkan dengan `firebase init`
@@ -92,7 +92,7 @@ hugo; firebase deploy --only hosting:<nama_app>
 hugo && firebase deploy --only hosting:<nama_app>
 ```
 
-### <a name="deployment-netlify"></a>Netlify
+#### <a name="deployment-netlify"></a>Netlify
 1. Buat file `netlify.toml` pada root dan salin kode berikut.
 ```toml
 [build]

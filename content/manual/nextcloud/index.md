@@ -10,6 +10,14 @@ summary: Manual untuk `nextcloud`.
 Live demo: https://try.nextcloud.com/
 
 
+## Perintah Umum
+
+#### Menjalankan OCC command
+Jalankan perintah dibawah ini dalam direktori Nextcloud.
+```bash
+/opt/rh/{PHP_VERSION}/root/bin/php occ {OCC_COMMMAND}
+```
+
 ## Troubleshooting
 
 #### Some files have not passed the integrity check
@@ -97,3 +105,13 @@ Cara penyelesaiannya,
 - Edit file `/etc/opt/rh/{PHP_VERSION}/php.d/10-opcache.ini` sesuaikan dengan konfigurasi yang disarankan pada halaman admin Nextcloud.
 - Jangan lupa aktifkan `opcache.enable_cli=1` juga.
 - Simpan, dan restart dengan `systemctl restart httpd`.
+
+#### The database is missing some indexes.
+Pesan lengkap problemnya adalah, `The database is missing some indexes. Due to the fact that adding indexes on big tables could take some time they were not added automatically. By running "occ db:add-missing-indices" those missing indexes could be added manually while the instance keeps running. Once the indexes are added queries to those tables are usually much faster.`
+
+Cara penyelesaiannya,
+
+Jalankan perintah berikut pada folder Nextcloud diinstal.
+```bash
+sudo -u {USERNAME} /opt/rh/{PVP_VERSION}/root/bin/php occ db:add-missing-indices
+```

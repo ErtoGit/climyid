@@ -14,7 +14,7 @@ yarn global add @vue/cli
 ```
 
 ## Perintah umum
-### Membuat project baru
+#### Membuat project baru
 ```bash
 vue create my-project
 # OR

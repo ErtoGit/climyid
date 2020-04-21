@@ -17,19 +17,19 @@ npm install -g now
 ## Perintah umum
 Untuk bantuan ketik `now help`.
 
-### Deploy ke ZEIT
+#### Deploy ke ZEIT
 Jalankan command berikut dalam folder project.
 ```bash
 now
 ```
 
-### Update project
+#### Update project
 Jalankan command berikut dalam folder project.
 ```bash
 now --prod
 ```
 
-### Local server
+#### Local server
 ```bash
 now dev
 ```

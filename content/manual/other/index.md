@@ -6,10 +6,7 @@ weight: 1
 summary: Manual untuk frameworks lain.
 ---
 
-### Cara menjalankan Nextcloud occ command
-```bash
-/opt/rh/{PHP_VERSION}/root/bin/php occ {OCC_COMMMAND}
-```
+## Perintah Umum
 
 ### Restart webmin
 ```bash

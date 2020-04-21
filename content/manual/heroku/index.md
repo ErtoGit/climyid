@@ -18,12 +18,12 @@ Untuk cara install alternatif bisa mengikuti langkahnya lewat [panduan ini](http
 ## Perintah umum
 Untuk bantuan ketik `heroku help`.
 
-### Update program
+#### Update program
 ```bash
 heroku update
 ```
 
-### Persiapan deploy
+#### Persiapan deploy
 Bagian ini adalah persiapan sebelum deploy ke Heroku. Jalankan command dalam folder project.
 ```bash
 heroku login
@@ -38,7 +38,7 @@ Yang sudah aktif, gunakan langkah ini.
 heroku git:remote -a NAMA_PROJECT
 ```
 
-### Deploy/update ke Heroku
+#### Deploy/update ke Heroku
 ```bash
 git add .
 git commit -am "Initial commit"

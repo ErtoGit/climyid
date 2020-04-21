@@ -21,7 +21,7 @@ summary: Manual untuk `git`.
 ## Perintah umum
 Untuk bantuan ketik `git help`.
 
-### <a name="membuat-repo-baru">Membuat repo baru</a>
+#### <a name="membuat-repo-baru"></a>Membuat repo baru
 Jalankan perintah berikut dalam folder project.
 ```bash
 git init
@@ -29,7 +29,7 @@ git add .
 git commit -am 'Initial commit'
 ```
 
-### <a name="menambahkan-remote-git-url"></a>Menambahkan remote git url
+#### <a name="menambahkan-remote-git-url"></a>Menambahkan remote git url
 ```bash
 git remote add origin <GIT_REPO_URL>
 # OR
@@ -47,12 +47,12 @@ Dan saat mau `git push` tinggal eksekusi satu perintah ini.
 git push -u origin master
 ```
 
-### <a name="mengecek-alamat-repo-git-url"></a>Mengecek alamat remote git url
+#### <a name="mengecek-alamat-repo-git-url"></a>Mengecek alamat remote git url
 ```bash
 git remote show origin
 ```
 
-### <a name="push-data-ke-remote-git"></a>Push data ke remote git
+#### <a name="push-data-ke-remote-git"></a>Push data ke remote git
 ```bash
 git push -u origin master
 # OR
@@ -61,7 +61,7 @@ git push -u github master
 git push -u gitlab master
 ```
 
-### <a name="pull-data-dari-remote-git"></a>Pull data dari remote git
+#### <a name="pull-data-dari-remote-git"></a>Pull data dari remote git
 ```bash
 git pull origin master
 # OR
@@ -70,12 +70,12 @@ git pull origin master --allow-unrelated-histories
 git pull github master
 ```
 
-### <a name="mengganti-url-remote-repo"></a>Mengganti url remote repo
+#### <a name="mengganti-url-remote-repo"></a>Mengganti url remote repo
 ```bash
 git remote set-url origin <GIT_REPO_BARU>
 ```
 
-### <a name="clonerepo"></a>Clone repo
+#### <a name="clonerepo"></a>Clone repo
 ```bash
 git clone <GIT_REPO_URL>
 ```
