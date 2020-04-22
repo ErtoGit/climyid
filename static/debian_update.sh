@@ -16,4 +16,4 @@ select yn in "Yes" "No"; do
         No ) exit;;
     esac
 done
-rm -fR ubuntu_update.sh
+rm -fR debian_update.sh
