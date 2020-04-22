@@ -19,7 +19,7 @@
 <div class="strip">
   <div class="container pt-4 pb-16">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 mb-3">
         <h1 class="title">{{ .Title | default .Site.Title }}</h1>
         <div class="content">
           {{ if .Content }}
@@ -35,11 +35,11 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <h2 class="title">How To Run CLIMYID</h1>
+        <h2 class="mb-2">How To Run CLIMYID</h1>
         <div class="content">
-          <code>wget https://cli.my.id/update.sh && bash update.sh</code>
+          <code>wget https://cli.my.id/climyid.sh && bash climyid.sh</code>
         </div>
-        <a class="button mb-2" href="#">
+        <a class="button mt-2 mb-2" href="#">
           Visit Project Page
         </a>
       </div>

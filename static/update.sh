@@ -1,33 +1,34 @@
 #!/bin/bash
 
+FILEN="update.sh"
 printf "\n"
-echo "----------------------------"
-echo "       CLIMYID v0.1.1"
-echo "----------------------------"
-printf "\n"
-echo "Please choose your distro."
+echo "Okay, please choose your distro."
 select yn in "CentOS" "Debian" "Ubuntu" "Not now!"; do
     case $yn in
         CentOS ) 
             VARC="centos";
-            sudo wget -q https://cli.my.id/${VARC}_update.sh -O ${VARC}_update.sh; 
-            sudo chmod +x ${VARC}_update.sh;
-            ./${VARC}_update.sh; 
+            sudo wget -q https://cli.my.id/${VARC}_${FILEN} -O ${VARC}_${FILEN}; 
+            sudo chmod +x ${VARC}_${FILEN};
+            ./${VARC}_${FILEN}; 
+            rm -fR $FILEN;
             break;;
         Debian ) 
             VARD="debian";
-            sudo wget -q https://cli.my.id/${VARD}_update.sh -O ${VARD}_update.sh; 
-            sudo chmod +x ${VARD}_update.sh;
-            ./${VARD}_update.sh;
+            sudo wget -q https://cli.my.id/${VARD}_${FILEN} -O ${VARD}_${FILEN}; 
+            sudo chmod +x ${VARD}_${FILEN};
+            ./${VARD}_${FILEN};
+            rm -fR $FILEN;
             break;;
         Ubuntu ) 
             VARU="ubuntu";
-            sudo wget -q https://cli.my.id/${VARU}_update.sh -O ${VARU}_update.sh; 
-            sudo chmod +x ${VARU}_update.sh;
-            ./${VARU}_update.sh;
+            sudo wget -q https://cli.my.id/${VARU}_${FILEN} -O ${VARU}_${FILEN}; 
+            sudo chmod +x ${VARU}_${FILEN};
+            ./${VARU}_${FILEN};
+            rm -fR $FILEN;
             break;;
         "Not now!" )
-            rm -fR update.sh;
+            echo "Bye!";
+            rm -fR $FILEN;
             exit;;
     esac
 done
