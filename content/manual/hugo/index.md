@@ -8,6 +8,7 @@ summary: Manual untuk `hugo`.
 
 # <a name="top"></a>Daftar Isi
 
+- [Install Hugo](#install-hugo)
 - [Perintah umum](#perintah-umum)
     - [Membuat site baru](#perintah-membuat-site-baru)
     - [Local server](#perintah-local-server)
@@ -20,6 +21,29 @@ summary: Manual untuk `hugo`.
     - [Netlify](#deployment-netlify)
 
 ---
+
+## <a name="install-hugo"></a>Install Hugo
+
+Unduh versi terbaru Hugo dengan cara berikut.
+```bash
+curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \
+ | grep  browser_download_url \
+ | grep Linux-64bit.deb \
+ | grep -v extended \
+ | cut -d '"' -f 4 \
+ | wget -i -
+```
+
+Kemudian jalankan perintah dibawah ini, untuk melakukan instalasi.
+
+```bash
+sudo dpkg -i hugo*_Linux-64bit.deb
+```
+
+Konfirmasi apakah Hugo sudah terpasang lewat perintah ini.
+```bash
+hugo --version
+```
 
 ## <a name="perintah-umum"></a>Perintah umum
 
