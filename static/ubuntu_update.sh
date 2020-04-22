@@ -1,5 +1,6 @@
 #!/bin/sh
 
+printf "\n"
 echo "Do you wish to check for updates?"
 select yn in "Yes" "No"; do
     case $yn in
@@ -15,3 +16,4 @@ select yn in "Yes" "No"; do
         No ) exit;;
     esac
 done
+rm -fR ubuntu_update.sh
