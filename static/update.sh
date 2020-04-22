@@ -1,6 +1,10 @@
 #!/bin/bash
 
 printf "\n"
+echo "----------------------------"
+echo "       CLIMYID v0.1"
+echo "----------------------------"
+printf "\n"
 echo "Please choose your distro."
 select yn in "CentOS" "Debian" "Ubuntu" "Not now!"; do
     case $yn in
@@ -27,4 +31,3 @@ select yn in "CentOS" "Debian" "Ubuntu" "Not now!"; do
     esac
 done
 rm -fR update.sh
-ls

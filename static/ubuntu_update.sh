@@ -1,7 +1,7 @@
 #!/bin/bash
 
 printf "\n"
-echo "Do you wish to check for updates?"
+echo "Do you wish to check for your Ubuntu updates now?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) sudo apt update -y; apt list --upgradeable; break;;

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 printf "\n"
-echo "Do you wish to check for updates?"
+echo "Do you wish to check for your CentOS updates now?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) sudo yum update -y; yum list --upgradeable; break;;
