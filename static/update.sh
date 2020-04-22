@@ -2,7 +2,7 @@
 
 printf "\n"
 echo "----------------------------"
-echo "       CLIMYID v0.1"
+echo "       CLIMYID v0.1.1"
 echo "----------------------------"
 printf "\n"
 echo "Please choose your distro."
@@ -27,7 +27,7 @@ select yn in "CentOS" "Debian" "Ubuntu" "Not now!"; do
             ./${VARU}_update.sh;
             break;;
         "Not now!" )
+            rm -fR update.sh;
             exit;;
     esac
 done
-rm -fR update.sh
