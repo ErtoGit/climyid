@@ -2,9 +2,10 @@
 
 FILE="climyid.sh"
 printf "\n"
-echo "----------------------------"
-echo "       CLIMYID v0.1"
-echo "----------------------------"
+echo "------------------------------------"
+echo "            CLIMYID v0.1"
+echo "         https://cli.my.id/"
+echo "------------------------------------"
 printf "\n"
 echo "Hello, what do you want to do today?"
 select yn in "Update my Linux" "Update my Windows" "Nevermind."; do

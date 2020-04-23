@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "CLI.my.id"
+title = "CLIMYID"
 themesDir = "themes"
 theme = "hugo-whisper-theme"
 
@@ -20,27 +20,27 @@ summaryLength = 30
     weight = 1
 
 [[menu.main]]
-    name = "Manual"
-    url = "/manual/"
+    name = "Changelog"
+    url = "/changelog/"
     weight = 2
 
 [params]
-  google_analytics_id=""
-  homepage_button_link = '/manual'
-  homepage_button_text = 'Read The Manual'
-  homepage_intro = 'CLI.my.id is a collection of most frequent used cli command.'
+  google_analytics_id="11"
+  homepage_button_link = '/changelog'
+  homepage_button_text = 'View Changelog'
+  homepage_intro = 'CLIMYID is a simple cli tool for your server.'
   homepage_image = '/images/terminal.gif'
 
   ## You can enable to add anchor links to header elements
   # enable_anchor_link = true
 
   [params.homepage_meta_tags]
-    meta_description = "CLI.my.id is a collection of most frequent used cli command."
-    meta_og_title = "CLI.my.id"
+    meta_description = "CLIMYID is a simple cli tool for your server."
+    meta_og_title = "CLIMYID"
     meta_og_type = "website"
     meta_og_url = "https://cli.my.id"
     meta_og_image = ""
-    meta_og_description = "CLI.my.id is a collection of most frequent used cli command."
+    meta_og_description = "CLIMYID is a simple cli tool for your server."
     meta_twitter_card = "summary"
     meta_twitter_site = "@ertomedia"
     meta_twitter_creator = "@ertomedia"

@@ -14,4 +14,4 @@ echo ">> Deploying to Firebase.."
 firebase login
 firebase deploy
 printf "\n"
-echo ">> ALL DONE."
+echo "✔ ALL DONE."

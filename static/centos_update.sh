@@ -6,8 +6,7 @@ echo "Do you wish to check for your CentOS updates now?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) 
-            sudo yum update -y; 
-            yum list --upgradeable; 
+            sudo yum check-update -y; 
             rm -fR $FILE;
             break;;
         No ) 
@@ -21,7 +20,7 @@ echo "Do you wish to upgrade it?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) 
-            sudo yum upgrade -y; 
+            sudo yum update -y; 
             sudo yum autoremove -y; 
             rm -fR $FILE;
             break;;
