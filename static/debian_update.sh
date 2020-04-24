@@ -2,6 +2,8 @@
 
 FILE="debian_update.sh"
 printf "\n"
+echo ">> Checking your distro version..."
+lsb_release -d
 echo "Do you wish to check for your Debian updates now?"
 select yn in "Yes" "No"; do
     case $yn in
@@ -11,7 +13,7 @@ select yn in "Yes" "No"; do
             rm -fR $FILE;
             break;;
         No ) 
-            echo "Bye!";
+            echo "Bye.";
             rm -fR $FILE;
             exit;;
     esac
@@ -26,7 +28,7 @@ select yn in "Yes" "No"; do
             rm -fR $FILE;
             break;;
         No ) 
-            echo "Bye!";
+            echo "Bye.";
             rm -fR $FILE;
             exit;;
     esac

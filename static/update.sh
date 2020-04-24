@@ -1,9 +1,14 @@
 #!/bin/bash
 
 FILEN="update.sh"
-printf "\n"
+
+function 1baris() {
+    printf "\n"
+}
+
+1baris
 echo "Okay, please choose your distro."
-select yn in "CentOS" "Debian" "Ubuntu" "Not now!"; do
+select yn in "CentOS" "Debian" "Ubuntu" "Kali" "Not now!"; do
     case $yn in
         CentOS ) 
             VARC="centos";
@@ -26,8 +31,15 @@ select yn in "CentOS" "Debian" "Ubuntu" "Not now!"; do
             ./${VARU}_${FILEN};
             rm -fR $FILEN;
             break;;
+        Kali ) 
+            VARK="kali";
+            sudo wget -q https://cli.my.id/${VARK}_${FILEN} -O ${VARK}_${FILEN}; 
+            sudo chmod +x ${VARK}_${FILEN};
+            ./${VARK}_${FILEN};
+            rm -fR $FILEN;
+            break;;
         "Not now!" )
-            echo "Bye!";
+            echo "Bye.";
             rm -fR $FILEN;
             exit;;
     esac

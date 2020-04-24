@@ -20,6 +20,10 @@ URL | Powered by
 
 ## Changelog
 
+Version 0.2:
+* [NEW] Update script for Kali.
+* [UPDATE] Menu header redesign.
+
 Version 0.1:
 * Update script for CentOS.
 * Update script for Ubuntu.
