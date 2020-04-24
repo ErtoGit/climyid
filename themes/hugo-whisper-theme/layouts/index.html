@@ -1,5 +1,11 @@
 {{ define "title" }}{{ .Site.Title }}{{ end}}
-{{ define "header_css" }}{{ end }}
+{{ define "header_css" }}
+<style>
+  .strip pre {
+    line-height: 1.19em;
+  }
+</style>
+{{ end }}
 {{ define "body_classes" }}page-home{{ end }}
 {{ define "header_classes" }}{{ end }}
 
@@ -20,7 +26,14 @@
   <div class="container pt-4 pb-16">
     <div class="row">
       <div class="col-12 mb-3">
-        <h1 class="title">{{ .Title | default .Site.Title }}</h1>
+        <!-- <h1 class="title">{{ .Title | default .Site.Title }}</h1> -->
+        <pre>
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+██ ▄▄▀██ ████▄ ▄██ ▄▀▄ ██ ███ █▄ ▄██ ▄▄▀██
+██ █████ █████ ███ █ █ ██▄▀▀▀▄██ ███ ██ ██
+██ ▀▀▄██ ▀▀ █▀ ▀██ ███ ████ ███▀ ▀██ ▀▀ ██
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+        </pre>
         <div class="content">
           {{ if .Content }}
           {{ .Content }}

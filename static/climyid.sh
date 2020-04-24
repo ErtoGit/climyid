@@ -1,12 +1,26 @@
 #!/bin/bash
 
+#clear
 FILE="climyid.sh"
-printf "\n"
-echo "------------------------------------"
-echo "            CLIMYID v0.1"
-echo "         https://cli.my.id/"
-echo "------------------------------------"
-printf "\n"
+VER="v0.1.1"
+CDEF="\e[39m"
+LCYAN="\e[96m"
+LGREN="\e[92m"
+DEF="\e[0m"
+INV="\e[7m"
+
+## Start Header ##
+printf "\n${LGREN}"
+printf "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄" && printf "\n"
+printf "██ ▄▄▀██ ████▄ ▄██ ▄▀▄ ██ ███ █▄ ▄██ ▄▄▀██" && printf "\n"
+printf "██ █████ █████ ███ █ █ ██▄▀▀▀▄██ ███ ██ ██" && printf "\n"
+printf "██ ▀▀▄██ ▀▀ █▀ ▀██ ███ ████ ███▀ ▀██ ▀▀ ██" && printf "\n"
+printf "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀" && printf "${CDEF}\n\n"
+printf "» CLIMYID ${INV} ${VER} ${DEF}" && printf "\n"
+#printf "» URL: https://cli.my.id" && printf "\n\n"
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+printf "\n\n"
+## End Header ##
 echo "Hello, what do you want to do today?"
 select yn in "Update my Linux" "Update my Windows" "Nevermind."; do
     case $yn in
