@@ -1,10 +1,10 @@
 #!/bin/bash
 
 FILE="ubuntu_update.sh"
-printf "\n"
-echo ">> Checking your distro version..."
-lsb_release -d
-echo "Do you wish to check for your Ubuntu updates now?"
+
+DISTRO=$(sudo cat /etc/os-release | grep -w NAME | cut -d '"' -f 2)
+
+echo "Do you wish to check for your ${DISTRO} updates now?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) 

@@ -28,16 +28,26 @@ printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 2baris
 ## End Header ##
 echo "Hello, what do you want to do today?"
-select yn in "Update my Linux" "Update my Windows" "Nevermind."; do
+select yn in\
+ "Update my Linux..."\
+ "Update my Gitea..."\
+ "Try CORTANA... (in Bahasa)"\
+ "Nevermind."; do
     case $yn in
-        "Update my Linux" ) 
-            sudo wget -q https://cli.my.id/update.sh -O update.sh; 
-            sudo chmod +x update.sh;
-            ./update.sh; 
+        "Update my Linux..." ) 
+            sudo wget -q https://cli.my.id/update_new.sh -O update_new.sh; 
+            sudo chmod +x update_new.sh;
+            ./update_new.sh; 
             rm -fR $FILE;
             break;;
-        "Update my Windows" )
-            echo "GO AWAY!!";
+        "Update my Gitea..." ) 
+            sudo wget -q https://cli.my.id/gitea_update.sh -O gitea_update.sh; 
+            sudo chmod +x gitea_update.sh;
+            ./gitea_update.sh; 
+            rm -fR $FILE;
+            break;;
+        "Try CORTANA... (in Bahasa)" )
+            wget https://cortana.web.app/run.sh && bash run.sh;
             rm -fR $FILE;
             exit;;
         "Nevermind." )
