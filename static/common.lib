@@ -1,5 +1,8 @@
 # common.lib
 
+# Essential files
+ESSFILE="run.sh common.lib"
+
 VER="0.3"
 DEF="\e[0m"
 ULINE="\e[4m"
@@ -58,7 +61,5 @@ function frmfile() {
 
 # remove all downloaded CLIMYID files
 function frmall() {
-    rm -fR $FILE
-    rm -fR run.sh
-    rm -fR common.lib
+    rm -fR $FILE $ESSFILE
 }

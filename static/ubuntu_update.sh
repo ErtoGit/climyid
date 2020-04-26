@@ -27,7 +27,7 @@ select yn in "Yes" "No"; do
             sudo apt upgrade -y; 
             sudo apt dist-upgrade -y;
             sudo apt autoremove -y; 
-            frmfile;
+            frmall;
             break;;
         No ) 
             fbye;

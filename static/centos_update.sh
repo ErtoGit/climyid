@@ -25,7 +25,7 @@ select yn in "Yes" "No"; do
         Yes ) 
             sudo yum update -y; 
             sudo yum autoremove -y; 
-            frmfile;
+            frmall;
             break;;
         No ) 
             fbye;
