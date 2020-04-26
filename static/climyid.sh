@@ -2,7 +2,8 @@
 
 clear
 FILE="climyid.sh"
-VER="v0.2"
+DESC="Simple cli tool for your server."
+VER="v0.3"
 CDEF="\e[39m"
 LCYAN="\e[96m"
 LGREN="\e[92m"
@@ -23,6 +24,7 @@ printf "██ █████ █████ ███ █ █ ██▄▀▀
 printf "██ ▀▀▄██ ▀▀ █▀ ▀██ ███ ████ ███▀ ▀██ ▀▀ ██" && 1baris
 printf "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀" && printf "${CDEF}\n\n"
 printf "» CLIMYID ${INV} ${VER} ${DEF}" && 1baris
+printf "» ${DESC}" && printf "\n\n"
 printf "» URL: https://cli.my.id" && printf "\n\n"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 2baris

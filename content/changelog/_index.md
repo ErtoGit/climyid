@@ -1,11 +1,7 @@
 ---
-title: 'v0.3'
+title: 'Overview'
 date: 2020-04-24T11:06:00+08:00
-draft: true
+draft: false
 weight: 1
-summary: Changelog for `v0.3`.
+summary: 
 ---
-
-## Features
-* [NEW] Auto detect Linux distro.
-* [FIX] Improving code quality.

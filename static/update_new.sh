@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILEN="update.sh"
+FILEN="update_new.sh"
 
 function 1baris() {
     printf "\n"

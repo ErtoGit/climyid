@@ -1,11 +1,12 @@
 ---
-title: 'v0.2'
-date: 2020-04-24T11:06:00+08:00
+title: 'v0.3'
+date: 2020-04-26T11:06:00+08:00
 draft: false
 weight: 1
-summary: Changelog for `v0.2`.
+summary: Changelog for `v0.3`.
 ---
 
 ## Features
-* [NEW] Update script for Kali.
-* [UPDATE] Menu header redesign.
+* [NEW] Automatic distro check for "Update my Linux" menu.
+* [NEW] Script for updating Gitea, a self-hosted Git platform.
+* [FIX] Improving code quality.
