@@ -7,6 +7,6 @@ summary: Changelog for `v0.3`.
 ---
 
 ## Features
-* [NEW] Automatic distro check for "Update my Linux" menu.
+* [NEW] Automatic distro check for **Update my Linux** menu.
 * [NEW] Script for updating Gitea, a self-hosted Git platform.
-* [FIX] Improving code quality.
+* [FIX] Code optimization.

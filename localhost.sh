@@ -1,7 +1,7 @@
 #!/bin/bash
+. static/common.lib
 
-CDEF="\e[39m"
-LRED="\e[91m"
+flogo
 
 function gen() {
     hugo

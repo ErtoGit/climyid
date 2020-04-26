@@ -1,4 +1,5 @@
 #!/bin/bash
+. common.lib
 
 FILE="debian_update.sh"
 
@@ -10,11 +11,11 @@ select yn in "Yes" "No"; do
         Yes ) 
             sudo apt update -y; 
             apt list --upgradeable; 
-            rm -fR $FILE;
+            frmfile; # remove THIS file
             break;;
         No ) 
-            echo "Bye.";
-            rm -fR $FILE;
+            fbye; # bye message
+            frmall; # remove all downloaded CLIMYID files
             exit;;
     esac
 done
@@ -26,11 +27,11 @@ select yn in "Yes" "No"; do
             sudo apt upgrade -y; 
             sudo apt dist-upgrade -y;
             sudo apt autoremove -y; 
-            rm -fR $FILE;
+            frmfile;
             break;;
         No ) 
-            echo "Bye.";
-            rm -fR $FILE;
+            fbye;
+            frmall;
             exit;;
     esac
 done

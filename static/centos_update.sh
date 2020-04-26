@@ -1,4 +1,5 @@
 #!/bin/bash
+. common.lib
 
 FILE="centos_update.sh"
 
@@ -9,11 +10,11 @@ select yn in "Yes" "No"; do
     case $yn in
         Yes ) 
             sudo yum check-update -y; 
-            rm -fR $FILE;
+            frmfile; # remove THIS file
             break;;
         No ) 
-            echo "Bye.";
-            rm -fR $FILE;
+            fbye; # bye message
+            frmall; # remove all downloaded CLIMYID files
             exit;;
     esac
 done
@@ -24,11 +25,11 @@ select yn in "Yes" "No"; do
         Yes ) 
             sudo yum update -y; 
             sudo yum autoremove -y; 
-            rm -fR $FILE;
+            frmfile;
             break;;
         No ) 
-            echo "Bye.";
-            rm -fR $FILE;
+            fbye;
+            frmall;
             exit;;
     esac
 done
