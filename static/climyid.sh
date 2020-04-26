@@ -37,9 +37,9 @@ select yn in\
  "Nevermind."; do
     case $yn in
         "Update my Linux..." ) 
-            sudo wget -q https://cli.my.id/update_new.sh -O update_new.sh; 
-            sudo chmod +x update_new.sh;
-            ./update_new.sh; 
+            sudo wget -q https://cli.my.id/update.sh -O update.sh; 
+            sudo chmod +x update.sh;
+            ./update.sh; 
             rm -fR $FILE;
             break;;
         "Update my Gitea..." ) 
