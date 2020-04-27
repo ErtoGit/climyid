@@ -38,7 +38,7 @@ function autocheck() {
     else
         fnewL # single line break
         echo "Unable to define your distro! Wanna try our supported update script close to your distro?"
-        select yn in "CentOS..." "Debian..." "Ubuntu..." "Kali..." "Maybe next time."; do
+        select yn in "CentOS..." "Debian..." "Ubuntu..." "Kali..." "NO (Back to Main)" "Exit"; do
             case $yn in
                 "CentOS..." ) 
                     VARC="centos";
@@ -64,7 +64,10 @@ function autocheck() {
                     fchmodx "${VARK}_${FILE}" && ./${VARK}_${FILE};
                     frmfile;
                     break;;
-                "Maybe next time." )
+                "NO (Back to Main)" ) 
+                    ./climyid.sh && frmfile;
+                    exit;;
+                Exit ) 
                     fbye; # bye message
                     frmall; # remove all downloaded CLIMYID files
                     exit;;

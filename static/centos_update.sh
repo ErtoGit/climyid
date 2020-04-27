@@ -6,13 +6,16 @@ FILE="centos_update.sh"
 DISTRO=$(sudo cat /etc/os-release | grep -w NAME | cut -d '"' -f 2)
 
 echo "Do you wish to check for your ${DISTRO} updates now?"
-select yn in "Yes" "No"; do
+select yn in "YES" "NO (Back to Main)" "Exit"; do
     case $yn in
-        Yes ) 
+        YES ) 
             sudo yum check-update -y; 
             frmfile; # remove THIS file
             break;;
-        No ) 
+        "NO (Back to Main)" ) 
+            ./climyid.sh && frmfile;
+            exit;;
+        Exit ) 
             fbye; # bye message
             frmall; # remove all downloaded CLIMYID files
             exit;;
@@ -20,14 +23,17 @@ select yn in "Yes" "No"; do
 done
 sleep 1
 echo "Do you wish to upgrade it?"
-select yn in "Yes" "No"; do
+select yn in "YES" "NO (Back to Main)" "Exit"; do
     case $yn in
-        Yes ) 
+        YES ) 
             sudo yum update -y; 
             sudo yum autoremove -y; 
             frmall;
             break;;
-        No ) 
+        "NO (Back to Main)" ) 
+            ./climyid.sh && frmfile;
+            exit;;
+        Exit ) 
             fbye;
             frmall;
             exit;;

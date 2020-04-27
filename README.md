@@ -20,6 +20,11 @@ URL | Powered by
 
 ## Changelog
 
+Version 0.3:
+* [NEW] Automatic distro check for **Update my Linux** menu.
+* [NEW] Script for updating Gitea, a self-hosted Git platform.
+* [FIX] Code optimization.
+
 Version 0.2:
 * [NEW] Update script for Kali.
 * [UPDATE] Menu header redesign.

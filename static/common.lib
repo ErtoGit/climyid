@@ -1,9 +1,8 @@
 # common.lib
 
 # Essential files
-ESSFILE="run.sh common.lib"
+ESSFILE="run.sh common.lib climyid.sh"
 
-VER="0.3"
 DEF="\e[0m"
 ULINE="\e[4m"
 CDEF="\e[39m"
@@ -41,7 +40,7 @@ function fwget() {
 
 # bye message
 function fbye() {
-    echo -e "${LCYAN}See you soon.${CDEF}"
+    echo -e "${LCYAN}See you later.${CDEF}"
 }
 
 # make file executable
@@ -50,7 +49,7 @@ function fchmodx() {
 }
 
 # finished operation message
-function fselesai() {
+function fdone() {
     echo -e "${LGREN}✔  ${ULINE}ALL DONE.${DEF}${CDEF}"
 }
 
