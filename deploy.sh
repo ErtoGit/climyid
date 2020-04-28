@@ -19,4 +19,4 @@ echo ">> Deploying to Firebase.."
 firebase login
 firebase deploy
 fnewL
-fselesai
+fdone

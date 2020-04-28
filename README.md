@@ -2,9 +2,9 @@
 CLIMYID is a simple cli tool for your server.
 
 ## Features
-- [x] Update Linux machine (CentOS, Debian, Ubuntu)
-- [ ] Install LEMP stack (Nginx, MySQL, PHP 7x) + Let's Encrypt
-- [ ] Install LAMP stack (Apache, MySQL, PHP 7x) + Let's Encrypt
+- [x] Update Linux machine (Kali, CentOS, Debian, Ubuntu)
+- [ ] Install LEMP stack (Nginx, MySQL, PHP 7x) + Fail2ban (Debian, Ubuntu)
+- [ ] Install LAMP stack (Apache, MySQL, PHP 7x) + Fail2ban
 
 ## Live site
 https://cli.my.id

@@ -7,28 +7,28 @@ function autocheck() {
     DISTRO=$(sudo cat /etc/os-release | grep -w ID | cut -d '=' -f 2)
     DISTRO2=$(sudo cat /etc/os-release | grep -w ID | cut -d '"' -f 2)
 
-    if [ $DISTRO = 'ubuntu' ]
+    if [ "$DISTRO" = 'ubuntu' ]
     then
         VARU="ubuntu";
         fwget "${VARU}_${FILE} -O ${VARU}_${FILE}"; # wget from url
         fchmodx "${VARU}_${FILE}" && ./${VARU}_${FILE}; # make file executable and execute it
         frmfile; # remove THIS file
     
-    elif [ $DISTRO = 'kali' ]
+    elif [ "$DISTRO" = 'kali' ]
     then
         VARK="kali";
         fwget "${VARK}_${FILE} -O ${VARK}_${FILE}"; 
         fchmodx "${VARK}_${FILE}" && ./${VARK}_${FILE};
         frmfile;
     
-    elif [ $DISTRO = 'debian' ]
+    elif [ "$DISTRO" = 'debian' ]
     then
         VARD="debian";
         fwget "${VARD}_${FILE} -O ${VARD}_${FILE}"; 
         fchmodx "${VARD}_${FILE}" && ./${VARD}_${FILE};
         frmfile;
     
-    elif [ $DISTRO2 = 'centos' ]
+    elif [ "$DISTRO2" = 'centos' ]
     then
         VARC="centos";
         fwget "${VARC}_${FILE} -O ${VARC}_${FILE}"; 
