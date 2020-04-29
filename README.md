@@ -3,7 +3,7 @@ CLIMYID is a simple cli tool for your server.
 
 ## Features
 - [x] Update Linux machine (Kali, CentOS, Debian, Ubuntu)
-- [ ] Install LEMP stack (Nginx, MySQL, PHP 7x) + Fail2ban (Debian, Ubuntu)
+- [x] Install LEMP stack (Nginx, MySQL, PHP 7x) + Fail2ban (Debian, Ubuntu)
 - [ ] Install LAMP stack (Apache, MySQL, PHP 7x) + Fail2ban
 
 ## Live site
@@ -19,6 +19,11 @@ URL | Powered by
  https://climyid.now.sh | [Vercel](https://climyid.now.sh/)
 
 ## Changelog
+
+Version 0.4:
+* [NEW] Install LEMP stack (Nginx, MySQL, PHP 7.4) + Fail2ban for Debian & Ubuntu.
+* [NEW] Server Benchmark. Credits to [masonr YABS](https://github.com/masonr/yet-another-bench-script).
+* [FIX] Code optimization.
 
 Version 0.3:
 * [NEW] Automatic distro check for **Update my Linux** menu.

@@ -58,44 +58,45 @@ function oscheck() {
                     NGINX=$(sudo service nginx status | grep 'Active' | awk '{print $3}');
                     if test "$NGINX" = "(running)"
                     then
-                        echo -e "${LGREN}✔  NGINX is running.${CDEF}" && ERR=0
+                        echo -e "${LGREN}✔  NGINX is running.${CDEF}" && ERRN=0
 
                     else
-                        echo -e "${LRED}×  NGINX is not running.${CDEF}" && ERR=1
+                        echo -e "${LRED}×  NGINX is not running.${CDEF}" && ERRN=1
 
                     fi && sleep 1;
                     # Check Fail2ban status
                     F2B=$(sudo service fail2ban status | grep 'Active' | awk '{print $3}');
                     if test "$F2B" = "(running)"
                     then
-                        echo -e "${LGREN}✔  Fail2ban is running.${CDEF}" && ERR=0
+                        echo -e "${LGREN}✔  Fail2ban is running.${CDEF}" && ERRF=0
 
                     else
-                        echo -e "${LRED}×  Fail2ban is not running.${CDEF}" && ERR=1
+                        echo -e "${LRED}×  Fail2ban is not running.${CDEF}" && ERRF=1
 
                     fi && sleep 1;
                     # Check MySQL status
                     SQL=$(sudo service mysqld status | grep 'Active' | awk '{print $3}');
                     if test "$SQL" = "(running)"
                     then
-                        echo -e "${LGREN}✔  MySQL is running.${CDEF}" && ERR=0
+                        echo -e "${LGREN}✔  MySQL is running.${CDEF}" && ERRS=0
 
                     else
-                        echo -e "${LRED}×  MySQL is not running.${CDEF}" && ERR=1
+                        echo -e "${LRED}×  MySQL is not running.${CDEF}" && ERRS=1
 
                     fi && sleep 1;
                     # Check PHP status
                     PHP=$(sudo service php7.4-fpm status | grep 'Active' | awk '{print $3}');
                     if test "$PHP" = "(running)"
                     then
-                        echo -e "${LGREN}✔  php7.4-fpm is running.${CDEF}" && ERR=0
+                        echo -e "${LGREN}✔  php7.4-fpm is running.${CDEF}" && ERRP=0
 
                     else
-                        echo -e "${LRED}×  php7.4-fpm is not running.${CDEF}" && ERR=1
+                        echo -e "${LRED}×  php7.4-fpm is not running.${CDEF}" && ERRP=1
 
                     fi && fnewL;
                     # Status report
-                    if test $ERR == 0
+                    let "RPT = $ERRN + $ERRF + $ERRS + $ERRP";
+                    if test "$RPT" == 0
                     then
                         fdone
                     else

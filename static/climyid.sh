@@ -2,7 +2,7 @@
 . common.lib
 
 clear
-VER="0.4beta"
+VER="0.4"
 FILE="climyid.sh"
 DESC="Simple cli tool for your server."
 
