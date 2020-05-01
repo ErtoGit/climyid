@@ -11,12 +11,12 @@ fnewL
 echo ">> Push updates to GIT.."
 git add . && sleep 1
 echo "Enter message for commit process?"
-read GIT_COMMENT && sleep 1
+read -r GIT_COMMENT && sleep 1
 git commit -am "${GIT_COMMENT}" && sleep 1
 git push -u origin master && sleep 1
 fnewL
-echo ">> Deploying to Firebase.."
-firebase login
-firebase deploy
-fnewL
+#echo ">> Deploying to Firebase.."
+#firebase login
+#firebase deploy
+#fnewL
 fdone

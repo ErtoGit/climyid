@@ -1,9 +1,13 @@
 # CLIMYID
-CLIMYID is a simple cli tool for your server.
+
+CLIMYID is a simple CLI tool for your server.
+
+![Demo picture](https://cdn.images.my.id/images/2020/04/29/75781d4f2bb85137d8a92549bee7ed0c.png)
 
 ## Features
 - [x] Update Linux machine (Kali, CentOS, Debian, Ubuntu)
 - [x] Install LEMP stack (Nginx, MySQL, PHP 7x) + Fail2ban (Debian, Ubuntu)
+- [ ] Install Docker Engine (CentOS, Debian, Ubuntu)
 - [ ] Install LAMP stack (Apache, MySQL, PHP 7x) + Fail2ban
 
 ## Live site

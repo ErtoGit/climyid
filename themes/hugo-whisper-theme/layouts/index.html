@@ -4,6 +4,9 @@
   .strip pre {
     line-height: 1.19em;
   }
+  .content .button {
+    text-decoration: none;
+  }
 </style>
 {{ end }}
 {{ define "body_classes" }}page-home{{ end }}
@@ -42,8 +45,13 @@
           {{ end }}
         </div>
         <h3 class="mb-2">How To Run {{ .Title }}</h3>
+        <h5 class="mb-2">Stable Package (Recommended)</h5>
         <div class="content mb-2">
             <code>wget https://cli.my.id/run.sh && bash run.sh</code>
+        </div>
+        <h5 class="mb-2">Nightly Package</h5>
+        <div class="content mb-2">
+            <code>wget https://cli.my.id/nightrun.sh && bash nightrun.sh</code>
         </div>
       </div>
     </div>
@@ -67,6 +75,10 @@
           </video>
         </div>
         <div class="content">
+          <h3 class="mb-2">Supported Distro</h3>
+          <div class="content mb-2">
+            <h2><span class="fl-ubuntu"></span> <span class="fl-debian"></span> <span class="fl-centos"></span></h2>
+          </div>
           <a class="button button-primary mb-2" href="{{ .Site.Params.homepage_button_link | relURL }}">
             {{ .Site.Params.homepage_button_text }}
           </a>

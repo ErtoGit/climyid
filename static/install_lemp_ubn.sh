@@ -3,7 +3,7 @@
 
 FILE="install_lemp_ubn.sh"
 
-function oscheck() {
+function oscheck() { # OS Check
     CATOS=$(sudo cat /etc/os-release | grep -w ID | cut -d '=' -f 2)
 
     if test "$CATOS" = 'ubuntu'
