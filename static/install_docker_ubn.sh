@@ -12,9 +12,9 @@ function oscheck() { # OS Check
         sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
         curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
         sudo apt-key fingerprint 0EBFCD88 && fnewL
-        echo "» Set up the repository..." && fnewLL
-        echo -e "${LCYAN}Choose our machine architecture?${CDEF}"
-        select yn in "x86_64 / amd64" "armhf" "arm64" "ppc64el" "s390x" "Later"; do
+        echo "» Set up the repository..."
+        echo -e "${LCYAN}Choose Linux architecture?${CDEF}"
+        select yn in "x86_64 / amd64" "armhf" "arm64" "ppc64el" "s390x" "Not now (Exit)"; do
             case $yn in
                 "x86_64 / amd64" ) 
                     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable";
@@ -46,7 +46,7 @@ function oscheck() { # OS Check
         frmall # remove all downloaded CLIMYID files
 
     else
-        f1baris
+        fnewL
         echo -e "${LCYAN}Your OS is not supported yet. Exiting now.${CDEF}"
         fbye # Bye message from Cortana
         frmall # remove all downloaded files

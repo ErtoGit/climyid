@@ -1,8 +1,13 @@
 #!/bin/bash
+#
+# https://source.my.id/erol/climyid
+#
+# Copyright (c) 2020 Erol Joudy. Released under the MIT License.
+
 . common.lib
 
 clear
-VER="0.5alpha"
+VER="0.5"
 FILE="climyid.sh"
 DESC="Simple cli tool for your server."
 
@@ -65,8 +70,9 @@ function docker_distro() {
 
 echo "Hello, what do you want to do today?"
 select yn in "Update my Linux..."\
- "Install LEMP Stack..."\
- "Install Docker..."\
+ "Install LEMP Stack"\
+ "Install Docker"\
+ "Install WireGuard VPN (by Nyr)"\
  "Server Benchmark (YABS by masonr)"\
  "Update my Gitea..."\
  "Try CORTANA... (in Bahasa)"\
@@ -81,6 +87,11 @@ select yn in "Update my Linux..."\
             break;;
         "Install Docker..." ) 
             docker_distro;
+            break;;
+        "Install WireGuard VPN (by Nyr)" ) 
+            fnewL
+            wget https://git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh; 
+            frmall && rm -fR wireguard-install.sh ; # remove all downloaded CLIMYID files
             break;;
         "Server Benchmark (YABS by masonr)" ) 
             fnewL

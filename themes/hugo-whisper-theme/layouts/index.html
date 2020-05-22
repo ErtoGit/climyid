@@ -1,6 +1,10 @@
 {{ define "title" }}{{ .Site.Title }}{{ end}}
 {{ define "header_css" }}
 <style>
+  svg, video {
+      max-width: 100%;
+      height: auto;
+  }
   .strip pre {
     line-height: 1.19em;
   }
@@ -45,13 +49,8 @@
           {{ end }}
         </div>
         <h3 class="mb-2">How To Run {{ .Title }}</h3>
-        <h5 class="mb-2">Stable Package (Recommended)</h5>
         <div class="content mb-2">
             <code>wget https://cli.my.id/run.sh && bash run.sh</code>
-        </div>
-        <h5 class="mb-2">Nightly Package</h5>
-        <div class="content mb-2">
-            <code>wget https://cli.my.id/nightrun.sh && bash nightrun.sh</code>
         </div>
       </div>
     </div>
@@ -67,8 +66,7 @@
           <video controls
               src="https://static.my.id/vid/climyid-7ad42aa6-8e74-491d-bb22-6255f592633f.webm"
               poster="https://cdn.images.my.id/images/2020/04/23/ec3b1f91d9638a704da992dfd7b7ee5a.png"
-              width="720"
-              class="mb-2">
+              class="mb-4">
 
           Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href="#">download it</a> and watch it with your favorite video player!
 
@@ -77,7 +75,7 @@
         <div class="content">
           <h3 class="mb-2">Supported Distro</h3>
           <div class="content mb-2">
-            <h2><span class="fl-ubuntu"></span> <span class="fl-debian"></span> <span class="fl-centos"></span></h2>
+            <h2><span class="fl-ubuntu pr-2"></span> <span class="fl-debian pr-2"></span> <span class="fl-centos"></span></h2>
           </div>
           <a class="button button-primary mb-2" href="{{ .Site.Params.homepage_button_link | relURL }}">
             {{ .Site.Params.homepage_button_text }}

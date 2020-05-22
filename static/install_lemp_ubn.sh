@@ -115,7 +115,7 @@ function oscheck() { # OS Check
         done
 
     else
-        f1baris
+        fnewL
         echo -e "${LCYAN}Your OS is not supported yet. Exiting now.${CDEF}"
         fbye # Bye message from Cortana
         frmall # remove all downloaded files

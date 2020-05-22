@@ -4,7 +4,7 @@
 flogo
 
 function gen() {
-    hugo
+    hugo server
 }
 (
     set -e 
@@ -15,4 +15,4 @@ if [ $errorCode -ne 0 ]; then
     echo -e "${LRED}×  Proses tidak dilanjutkan. Ada yang salah!${CDEF}"
     exit $errorCode
 fi
-firebase serve
+# firebase serve

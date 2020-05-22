@@ -5,7 +5,7 @@
 flogo
 ## End Header ##
 
-echo ">> Generating static files.."
+echo "» Generating static files.."
 hugo && sleep 1
 #fnewL
 #echo ">> Push updates to GIT.."
@@ -15,7 +15,7 @@ hugo && sleep 1
 #git commit -am "${GIT_COMMENT}" && sleep 1
 #git push -u origin master && sleep 1
 fnewL
-echo ">> Deploying to Firebase.."
+echo "» Deploying to Firebase.."
 firebase login
 firebase deploy
 fnewL

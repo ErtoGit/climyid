@@ -5,10 +5,10 @@
 flogo
 ## End Header ##
 
-echo ">> Generating static files.."
+echo "» Generating static files.."
 hugo && sleep 1
 fnewL
-echo ">> Push updates to GIT.."
+echo "» Push updates to GIT.."
 git add . && sleep 1
 echo "Enter message for commit process?"
 read -r GIT_COMMENT && sleep 1

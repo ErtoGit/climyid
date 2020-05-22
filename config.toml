@@ -20,16 +20,17 @@ summaryLength = 30
     weight = 1
 
 [[menu.main]]
-    name = "Changelog"
-    url = "/changelog/"
+    name = "Readme"
+    url = "/readme/"
     weight = 2
+
 
 [params]
   google_analytics_id="11"
-  homepage_button_link = '/changelog'
-  homepage_button_text = 'View Changelog'
+  homepage_button_link = '/readme'
+  homepage_button_text = 'View Readme'
   homepage_intro = 'CLIMYID is a simple cli tool for your server.'
-  homepage_image = '/images/terminal.gif'
+  homepage_image = 'https://cdn.images.my.id/images/2020/04/23/ec3b1f91d9638a704da992dfd7b7ee5a.png'
 
   ## You can enable to add anchor links to header elements
   # enable_anchor_link = true

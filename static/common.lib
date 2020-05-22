@@ -1,7 +1,7 @@
 # common.lib
 
 # Essential files
-ESSFILE="run.sh common.lib climyid.sh"
+ESSFILE="run.sh nightrun.sh common.lib climyid.sh"
 
 DEF="\e[0m"
 ULINE="\e[4m"
